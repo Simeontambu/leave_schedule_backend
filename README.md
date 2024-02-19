@@ -6,13 +6,12 @@ Ce projet vise à mettre en place un outil en ligne pour la gestion des planific
 
 ## Fonctionnalités
 
--   Une page login
--   Une page register
--   Dashboard
+-   Une route login
+-   Une route register
 -   CRUD agent
 -   Demande de congé
 -   Gestion des utilisateurs
--   Liste des agents qui sont en congé
+-   Une route qui retourne la liste des agents
 
 ## Technologies utilisées
 
@@ -27,6 +26,9 @@ Ce projet vise à mettre en place un outil en ligne pour la gestion des planific
 -   Démarrez le serveur: php artisan serve
 
 ## Utilisation de l'API (Endpoint)
+- 
+- 
+- 
 
 ## Licence
 
