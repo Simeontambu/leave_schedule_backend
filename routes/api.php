@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\API\AgentController;
+use App\Http\Controllers\API\CongeController;
+use App\Http\Controllers\API\PlanningController;
 use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -18,11 +20,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('user/create', [UserController::class, 'register']);
 Route::post('/login', [UserController::class, 'login']);
-Route::post('/agents/create', [AgentController::class, 'store']);
-Route::get('/agents', [AgentController::class, 'index']);
+
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
+    Route::post('/agents/create', [AgentController::class, 'store']);
+    Route::post('/conge/create', [CongeController::class, 'store']);
+    Route::post('/planning/create', [PlanningController::class, 'store']);
+    Route::get('/agents', [AgentController::class, 'index']);
 });

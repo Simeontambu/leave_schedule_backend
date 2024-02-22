@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateAgentsRequest extends FormRequest
+class CreateCongeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +22,7 @@ class CreateAgentsRequest extends FormRequest
     public function rules(): array
     {
         return [
-        'nom'=>"required",
-        'prenom'=>"required"
+            //
         ];
     }
 }

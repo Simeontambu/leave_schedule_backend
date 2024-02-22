@@ -54,7 +54,7 @@ class AgentController extends Controller
             if (!$fonction || !$direction) {
                 return [
                     "status" => 404,
-                    "message" => "Tu dois fournir le libelle"
+                    "message" => "You must provide the wording"
 
                 ];
             }
@@ -67,7 +67,7 @@ class AgentController extends Controller
             return [
                 "status" => 200,
                 "message" => "user added successfully",
-                "user" => $user
+                "agent" => $user
 
             ];
         } catch (Exception $e) {
