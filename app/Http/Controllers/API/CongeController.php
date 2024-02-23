@@ -13,6 +13,13 @@ use Illuminate\Http\Request;
 
 class CongeController extends Controller
 {
+
+    public function index()
+    {
+        $data = conge::all();
+        
+        return response()->json($data);
+    }
     // ask leave
     public function store(CreateCongeRequest $request)
     {

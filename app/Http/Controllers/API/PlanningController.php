@@ -13,15 +13,19 @@ use Illuminate\Http\Request;
 
 class PlanningController extends Controller
 {
+    public function index()
+    {
+        $data = planning::all();
+        
+        return response()->json($data);
+    }
     public function store(CreatePlanningRequest $request)
     {
         try {
             $planning = new planning();
             // check if a column exists in the related table before adding
             $agent = Agents::where('nom', $request['nom'])->first();;
-           
-            // $reason = Motif::where('libelle_motif ', $request['libelle_motif '])->first();;
-            // dd($agent);
+
             if (!$agent) {
                 return [
                     "status" => 404,
